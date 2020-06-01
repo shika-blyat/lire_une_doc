@@ -34,7 +34,7 @@ Première étape ? Commençons par analyser le message d'erreur. Première ligne
 Okay, donc, d'abord `Traceback`. Qu'est ce que ça veut dire ? Google va nous le dire ! 
 Utilisons Google Traduction. Coup de chance, en tapant simplement `traduction` sur Google, on tombe sur Google Traduction:
 
-![](assets/traceback_trad.jpg)
+![_](https://raw.githubusercontent.com/shika-blyat/lire_une_doc/master/assets/traceback_trad.JPG)
 
 Okay, donc Python nous dit qu'il remonte la trace en mettant le `most recent call` (appel le plus récent) en `last` (dernier). J'imagines qu'il remonte la trace du message d'erreur ?
 Soit, continuons:
@@ -93,7 +93,7 @@ Bon bah génial, mais j'en fais quoi de cette documentation ? J'vais commencer p
 
 Oula oula, c'est quoi tous ces résultats, faisons le tri. Qu'est ce que nous avons nous ? On a un `client.user` et un `message.author`. Parmis tous les résultats, j'en vois deux qui m'intéresse:
 `discord.Role.mention` et `discord.User.mention`. En fait, non, après réflexion je n'ai qu'un user, pas un rôle. Cliquons donc sur `discord.User.mention`, et regardons les informations que ça nous donne:
-![](assets/disc_mention_doc.jpg)
+![_](https://raw.githubusercontent.com/shika-blyat/lire_une_doc/master/assets/disc_mention_doc.JPG)
 
 Je vois que c'est de type string, et que ça permet visiblement de mentionner l'user en question. Par contre, je ne sais pas si c'est une méthode ou un attribut. Dois je faire `user.mention` ou `user.mention()` ? Essayons:
 
