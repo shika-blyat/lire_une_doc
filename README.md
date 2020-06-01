@@ -2,7 +2,7 @@
 
 ## Utilité de ce document
 
-Dans le quotidien d'un développeur, trouver des informations à propos de tels langages/libraries/frameworks est commun, et le faire efficacement est une compétence qui s'acquiert avec le temps. Malgré tout, je penses qu'il y a une manière efficace de le faire qui n'est pas forcément si évidente, et le présent document essaie de montrer, pas à pas, comment faire.
+Dans le quotidien d'un développeur, trouver des informations à propos de tels langages/libraries/frameworks est commun, et le faire efficacement est une compétence qui s'acquiert avec le temps. Malgré tout, je penses qu'il y a une manière efficace de le faire qui n'est pas forcément si évidente, et ce document essaie de montrer, pas à pas, comment faire.
 
 ## Contribuer
 
