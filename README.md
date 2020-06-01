@@ -28,17 +28,23 @@ Traceback (most recent call last):
 TypeError: can only concatenate str (not "int") to str
 ```
 Première étape ? Commençons par analyser le message d'erreur. Première ligne:
+
 > Traceback (most recent call last):
+
 Okay, donc, d'abord `Traceback`. Qu'est ce que ça veut dire ? Google va nous le dire ! 
 Utilisons Google Traduction. Coup de chance, en tapant simplement `traduction` sur Google, on tombe sur Google Traduction:
+
 ![][assts/traceback_trad.jpg]
+
 Okay, donc Python nous dit qu'il remonte la trace en mettant le `most recent call` (appel le plus récent) en `last` (dernier). J'imagines qu'il remonte la trace du message d'erreur ?
 Soit, continuons:
 
 > File "main.py", line 1, in <module>
+
 Okay, donc dans le fichier `main.py`, à la ligne `1`. Bien, on avance, on sait où se trouve l'erreur
 
 > TypeError: can only concatenate str (not "int") to str
+
 `Type Error` Mmh, erreur de type ? Keskessé ? Concatenate ? Mmh, demandons à google, copions le message et ajoutons python devant, ainsi:
 `python TypeError: can only concatenate str (not "int") to str`
 
@@ -84,9 +90,11 @@ client.run('your token here')
 
 Ca fonctionne ! Mais bon, j'aimerais ping la personne en répondant `Hello!`, ça serait bête qu'elle ne voit pas le message de mon bot, sauf que je ne sais pas comment ping une personne avec discord.py. Tapons `discord.py documentation` sur google :). Le link de la documentation en question: https://discordpy.readthedocs.io/en/latest/
 Bon bah génial, mais j'en fais quoi de cette documentation ? J'vais commencer par essayer de taper `mention` dans la barre de recherche à gauche, vu que ça m'a l'air d'être la meilleure chose à faire.
+
 Oula oula, c'est quoi tous ces résultats, faisons le tri. Qu'est ce que nous avons nous ? On a un `client.user` et un `message.author`. Parmis tous les résultats, j'en vois deux qui m'intéresse:
 `discord.Role.mention` et `discord.User.mention`. En fait, non, après réflexion je n'ai qu'un user, pas un rôle. Cliquons donc sur `discord.User.mention`, et regardons les informations que ça nous donne:
 ![][assts/disc_mention_doc.jpg]
+
 Je vois que c'est de type string, et que ça permet visiblement de mentionner l'user en question. Par contre, je ne sais pas si c'est une méthode ou un attribut. Dois je faire `user.mention` ou `user.mention()` ? Essayons:
 
 ```py
