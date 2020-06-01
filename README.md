@@ -2,15 +2,15 @@
 
 ## Utilité de ce document
 
-Dans le quotidien d'un développeur, trouver des informations à propos de tels langages/libraries/frameworks est commun, et le faire efficacement est une compétence qui s'acquiert avec le temps. Malgré tout, je penses qu'il y a une manière efficace de le faire qui n'est pas forcément si évidente, et ce document essaie de montrer, pas à pas, comment faire.
+Dans le quotidien d'un développeur, trouver des informations à propos de tels langages/libraries/frameworks est commun, et le faire efficacement est une compétence qui s'acquiert avec le temps. Je penses qu'il y a une manière efficace de le faire qui n'est pas forcément si évidente, et ce document essaie de montrer, pas à pas, comment faire.
 
 ## Contribuer
 
-Si vous repérez une faute d'orthographe, une tournure floue, avez une proposition d'amélioration, quelque à ajouter/retirer, ou tout simplement avez une question, ouvrez une issue/PR !
+Si vous repérez une faute d'orthographe, quelque à ajouter/retirer, une tournure floue, avez une proposition d'amélioration, ou tout simplement une question, ouvrez une issue/PR !
 
 ## Avant de commencer
 
-J'utiliserais google et mozilla firefox dans ce document, si vous utilisez quelque chose de différent, il est possible qu'il y ai de petits changement à faire pour adapter certaines choses (n'hésitez pas à contribuer pour compléter pour d'autres moteurs de recherches/navigateurs)
+J'utiliserais google et mozilla firefox dans ce document, si vous utilisez quelque chose de différent, il est possible qu'il y ait de petits changements à faire pour adapter certaines choses (n'hésitez pas à contribuer pour compléter pour d'autres moteurs de recherches/navigateurs)
 
 ### TROUVER UNE INFORMATION SUR UN MOTEUR DE RECHERCHE A PARTIR D'UN MESSAGE D'ERREUR
 
@@ -45,13 +45,14 @@ Okay, donc dans le fichier `main.py`, à la ligne `1`. Bien, on avance, on sait 
 
 > TypeError: can only concatenate str (not "int") to str
 
-`Type Error` Mmh, erreur de type ? Keskessé ? Concatenate ? Mmh, demandons à google, copions le message et ajoutons python devant, ainsi:
+`Type Error` Mmh, erreur de type ? Keskessé ? Concatenate ? Demandons à google, copions le message et ajoutons python devant, ainsi:
 `python TypeError: can only concatenate str (not "int") to str`
 
-Premier link que nous renvoie google: https://stackoverflow.com/questions/51252580/getting-a-typeerror-can-only-concatenate-str-not-int-to-str une question stack overflow, un forum anglophone de développeur très connu et qui vous aidera souvent quand vous avez un problème :p. Regardons le contenu de ce link:
+Premier link que nous propose google: https://stackoverflow.com/questions/51252580/getting-a-typeerror-can-only-concatenate-str-not-int-to-str une question stack overflow, un forum anglophone de développeur très connu et qui vous aidera souvent lorsque vous avez un problème :p. Regardons le contenu de ce link:
 > Python working a bit differently to JavaScript for example, the value you are concatenating needs to be same type, both int or str... 
 
-Mmh, okay :). Donc visiblement on ajoute une valeur de type str et une valeur de type int ensemble. D'accord, on avance. La suite montre un code qui ressemble beaucoup au notre et qui lève la même erreur. Génial il nous dis même comment résoudre le problème ! Il suffit de convertir le int en str, avec un appel à `str`. Essayons:
+Mmh, okay :). Donc visiblement on ajoute une valeur de type str et une valeur de type int ensemble, et Python est pas d'accord. La suite montre un code qui ressemble beaucoup au notre et qui lève la même erreur. Génial il nous dit même comment résoudre le problème ! Il suffit de convertir le int en str, avec un appel à `str`. Essayons:
+
 ```py
 print("a" + str(1))
 ```
@@ -60,12 +61,12 @@ Ca fonctionne !
 
 #### Conclusion
 
-- Lorsqu'on ne connaît pas un mot ou deux dans un message d'erreur, on le traduit, et on essaie de lui donner du sens dans le contexte
-- Lorsqu'on ne pige rien du tout à plusieurs phrases, on essaie de demander à google si y'a pas quelqu'un qui a déjà posé la question pour nous et quelqu'un qui y a déjà répondu (ça sera très souvent le cas)
+- Lorsqu'on ne connaît pas un mot ou deux dans un message d'erreur, on les traduit, et on essaie de lui donner du sens dans le contexte
+- Lorsqu'on ne pige rien du tout à la phrase en entier, on fait une recherche sur un moteur de recherche, pour voir si y'a pas quelqu'un qui a déjà posé la question pour nous et quelqu'un qui y a déjà répondu (ça sera très souvent le cas)
 
 ### TROUVER UNE INFORMATION DANS UNE DOCUMENTATION
 
-J'ai trouvé comment résoudre les différents que mon cours proposait, et je l'ai fini. Je me sens assez confiant en Python pour faire un petit projet, un bot discord. Je vais utiliser la libraire discord.py pour cela. Mais, petit problème, je ne sais pas par où commencer. Cherchons rapidement sur internet `discord.py tutorial`. Le premier link nous mène à:
+J'ai trouvé comment résoudre les différents problèmes que mon cours proposait, et je l'ai fini. Je me sens assez confiant en Python pour faire un petit projet, un bot discord. Je vais utiliser la libraire discord.py pour cela. Mais, petit problème, je ne sais pas par où commencer. Cherchons rapidement sur internet `discord.py tutorial`. Le premier link nous mène à:
 https://discordpy.readthedocs.io/en/latest/quickstart.html qui semble donner un bout de code "template" pour commencer.
 
 ```py
@@ -89,7 +90,7 @@ client.run('your token here')
 ```
 
 Ca fonctionne ! Mais bon, j'aimerais ping la personne en répondant `Hello!`, ça serait bête qu'elle ne voit pas le message de mon bot, sauf que je ne sais pas comment ping une personne avec discord.py. Tapons `discord.py documentation` sur google :). Le link de la documentation en question: https://discordpy.readthedocs.io/en/latest/
-Bon bah génial, mais j'en fais quoi de cette documentation ? J'vais commencer par essayer de taper `mention` dans la barre de recherche à gauche, vu que ça m'a l'air d'être la meilleure chose à faire.
+Bon bah génial, mais j'en fais quoi de cette documentation ? J'vais commencer par essayer de taper `mention` dans la barre de recherche à gauche, ça m'a l'air d'être la meilleure chose à faire.
 
 Oula oula, c'est quoi tous ces résultats, faisons le tri. Qu'est ce que nous avons nous ? On a un `client.user` et un `message.author`. Parmis tous les résultats, j'en vois deux qui m'intéresse:
 `discord.Role.mention` et `discord.User.mention`. En fait, non, après réflexion je n'ai qu'un user, pas un rôle. Cliquons donc sur `discord.User.mention`, et regardons les informations que ça nous donne:
