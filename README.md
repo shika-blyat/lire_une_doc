@@ -12,6 +12,11 @@ Si vous repérez une faute d'orthographe, quelque à ajouter/retirer, une tournu
 
 J'utiliserais google et mozilla firefox dans ce document, si vous utilisez quelque chose de différent, il est possible qu'il y ait de petits changements à faire pour adapter certaines choses (n'hésitez pas à contribuer pour compléter pour d'autres moteurs de recherches/navigateurs)
 
+## Sommaire
+
+- [Trouver une information dans un moteur de recherche](#trouver-une-information-sur-un-moteur-de-recherche-a-partir-dun-message-derreur) 
+- [Trouver une information dans une documentation](#trouver-une-information-dans-une-documentation)
+
 ### TROUVER UNE INFORMATION SUR UN MOTEUR DE RECHERCHE A PARTIR D'UN MESSAGE D'ERREUR
 
 Supposons que je sois en train d'apprendre le Python, et que j'essaie de résoudre un exercice. Voici mon code actuel:
